@@ -8,7 +8,7 @@ RUN ln -s /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini && \
 RUN mkdir soy && \
     apt-get update && \
     apt-get install -y zip && \
-    curl -L -o /tmp/soycms.zip https://github.com/aldentea/soycms/releases/download/3.1.3.15/soycms_3.1.3.15_mysql.zip && \
+    curl -L -o /tmp/soycms.zip https://github.com/aldentea/soycms/releases/download/3.1.3.96/soycms_3.1.3.96_mysql.zip && \
     unzip -d soy /tmp/soycms.zip && \
     chown www-data . && \
     chown www-data soy/admin/cache && \
