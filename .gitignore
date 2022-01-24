@@ -1,5 +1,4 @@
 httpd/log/*.log
 soycms/db/*.db
-.env
 mariadb/*
 sites/*
