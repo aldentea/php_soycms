@@ -19,8 +19,7 @@ services:
       - ./httpd/conf/sites-available:/etc/apache2/sites-available
       - ./httpd/log:/var/log/apache2
       - ./php/conf.d:/usr/local/etc/php/conf.d
-      - ./sites/:/var/www/
-      - tenuki:/var/www/soy/ # /var/www/soy はホスト側と同期しない。
+      - ./sites:/var/www/sites
     depends_on:
       - db
     env_file: .env
