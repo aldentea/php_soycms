@@ -35,7 +35,7 @@ docker-compose.yml を参考にして下さい。以下のディレクトリを�
 永続化をしたいのであれば、さらに以下のディレクトリをマウントする必要があります。
 
   - /var/www/soy/common/db
-  - /var/www
+  - /var/www/sites
   - データベースにMySQL/MariaDBを使う場合は、そのデータディレクトリ
 
 その他、設定にあたっての参考情報を並べておきます。
