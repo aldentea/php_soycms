@@ -1,7 +1,5 @@
 version: '3'
 
-volumes:
-  tenuki:
 services:
   db:
     image: mariadb:latest
@@ -9,8 +7,6 @@ services:
     volumes:
       - ./mariadb:/var/lib/mysql
     restart: always
-    ports:
-      - 3306:3306
   soycms:
     image: aldentea/php_soycms:3.2.1
     volumes: 
@@ -26,4 +22,3 @@ services:
     ports: 
       - '8008:80'
     restart: always
-

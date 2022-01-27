@@ -8,7 +8,7 @@ RUN docker-php-ext-install pdo_mysql && \
 RUN mkdir soy && \
     apt update && \
     apt install -y zip mariadb-client && \
-    curl -L -o /tmp/soycms.zip https://github.com/inunosinsi/soycms/raw/master/package/soycms/soycms_3.2.1.3_mysql.zip && \
+    curl -L -o /tmp/soycms.zip https://github.com/inunosinsi/soycms/raw/master/package/soycms/soycms_3.2.1.7_mysql.zip && \
     unzip -d soy /tmp/soycms.zip && \
     chown www-data . && \
     chown www-data soy/admin/cache && \
