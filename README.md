@@ -3,26 +3,35 @@
 
 ## 環境
 
-- php:8.0-apache をベースにしています。すなわち、Debian系の環境です。
+- php:apache をベースにしています。すなわち、Debian系の環境です。
 - SOYCMSは、ドキュメントルートのsoyディレクトリに配置しています。初期設定を行うには、/soy/soycms/にアクセスしてください。
 
 ## 使い方
 
 単に使うだけなら、Dockerfileは不要です。
 
-### 手っ取り早く使いたい人
+### A. とりあえず使ってみたい人
 
 このリポジトリをクローンして、
 
     docker compose up
 
-### Dockerイメージを使いたい人
+### B. 永続化もしてみたい人
 
-とりあえず動かすには、以下のディレクトリをマウントする必要があります。（`docker cp` で持ってきても構いませんが、とりあえずのものがこのリポジトリにあります。）
+このリポジトリをクローンする。mariadbディレクトリとsitesディレクトリを作成し、docker-compose.ymlのコメントを解除（3行）して、
 
-  - /var/www/soy/common/config
-  - /etc/apache2/sites-available
-  
+    docker compose up
+
+MariaDBのパスワードは、soycms/config/db/mysql.phpと.envの2カ所にあります。（猫が好きではないなどの理由で）変更したい人は両方のファイルを編集して下さい。
+
+### C. いろいろイジりたい人
+
+docker-compose.yml を参考にして下さい。以下のディレクトリをどうにかする必要があるでしょう。
+
+  - /var/www/soy/common/config （SOYCMSの設定）
+  - /etc/apache2/sites-available （Apacheの設定）
+  - /usr/local/etc/php/conf.d （PHPの設定。これはこのままでもいいかもしれない）  
+
 永続化をしたいのであれば、さらに以下のディレクトリをマウントする必要があります。
 
   - /var/www/soy/common/db
