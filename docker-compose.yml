@@ -4,18 +4,18 @@ services:
   db:
     image: mariadb:latest
     env_file: .env
-    volumes:
-      - ./mariadb:/var/lib/mysql
+    #volumes:
+    #  - ./mariadb:/var/lib/mysql
     restart: always
   soycms:
-    image: aldentea/php_soycms:3.2.1
+    image: aldentea/php_soycms:3.2.1.7
     volumes: 
       - ./soycms/config:/var/www/soy/common/config
       - ./soycms/db:/var/www/soy/common/db
       - ./httpd/conf/sites-available:/etc/apache2/sites-available
       - ./httpd/log:/var/log/apache2
       - ./php/conf.d:/usr/local/etc/php/conf.d
-      - ./sites:/var/www/sites
+    #  - ./sites:/var/www/sites
     depends_on:
       - db
     env_file: .env
