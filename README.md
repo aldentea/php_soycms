@@ -14,13 +14,13 @@
 
 このリポジトリをクローンして、
 
-    docker compose up
+    docker-compose up
 
-### B. 永続化もしてみたい人
+### B. とりあえず永続化もしてみたい人
 
-このリポジトリをクローンする。mariadbディレクトリとsitesディレクトリを作成し、docker-compose.ymlのコメントを解除（3行）して、
+まずこのリポジトリをクローンします。mariadbディレクトリとsitesディレクトリを作成し、docker-compose.ymlのコメントを解除（3行）して、
 
-    docker compose up
+    docker-compose up
 
 MariaDBのパスワードは、soycms/config/db/mysql.phpと.envの2カ所にあります。（猫が好きではないなどの理由で）変更したい人は両方のファイルを編集して下さい。
 
