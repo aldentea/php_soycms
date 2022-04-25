@@ -16,6 +16,7 @@ services:
       - ./httpd/log:/var/log/apache2
       - ./php/conf.d:/usr/local/etc/php/conf.d
     #  - ./sites:/var/www/sites
+    #  - ./soycms/webapp:/var/www/soy/app/webapp
     depends_on:
       - db
     env_file: .env
