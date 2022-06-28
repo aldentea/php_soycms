@@ -3,7 +3,7 @@
 
 ## 環境
 
-- php:apache をベースにしています。すなわち、Debian系の環境です。
+- [php:apache](https://hub.docker.com/_/php?tab=description) をベースにしています。すなわち、Debian系の環境です。
 - SOYCMSは、ドキュメントルートのsoyディレクトリに配置しています。初期設定を行うには、/soy/soycms/にアクセスしてください。
 
 ## 使い方
@@ -37,6 +37,12 @@ docker-compose.yml を参考にして下さい。以下のディレクトリを�
   - /var/www/soy/common/db
   - /var/www/sites
   - データベースにMySQL/MariaDBを使う場合は、そのデータディレクトリ
+
+### D. SoyAppを使いたい人
+
+3.2.18から、SoyAppにも対応しています。SoyAppを置いたディレクトリを、/var/www/soy/app/webapp にマウントして下さい。
+
+## その他の参考情報
 
 その他、設定にあたっての参考情報を並べておきます。
 
