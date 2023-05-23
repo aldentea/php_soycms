@@ -9,11 +9,12 @@ RUN mkdir soy && \
     mkdir sites && \
     apt update && \
     apt install -y zip mariadb-client && \
-    curl -L -o /tmp/soycms.zip https://github.com/aldentea/soycms/raw/3.2.18/package/soycms/soycms_3.2.18_mysql.zip && \
+    curl -L -o /tmp/soycms.zip https://github.com/aldentea/soycms/raw/3.11.9/package/soycms/soycms_3.11.9_mysql.zip && \
     unzip -d soy /tmp/soycms.zip && \
     chown www-data sites && \
     chown www-data soy/admin/cache && \
     chown www-data soy/soycms/cache && \
+    chown www-data soy/app/cache && \
     chown www-data soy/common/db
 RUN a2ensite 010-soycms.conf && \
     a2dissite 000-default.conf && \
