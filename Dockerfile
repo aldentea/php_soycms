@@ -9,7 +9,7 @@ RUN mkdir soy && \
     mkdir sites && \
     apt update && \
     apt install -y zip mariadb-client && \
-    curl -L -o /tmp/soycms.zip https://github.com/aldentea/soycms/raw/3.13.7/package/soycms/soycms_3.13.7_mysql.zip && \
+    curl -L -o /tmp/soycms.zip https://saitodev.co/site/storage/download/index.php/soycms_3.14.11_mysql.zip && \
     unzip -d soy /tmp/soycms.zip && \
     chown www-data sites && \
     chown www-data soy/admin/cache && \
